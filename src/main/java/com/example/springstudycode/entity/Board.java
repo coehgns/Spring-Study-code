@@ -2,7 +2,6 @@ package com.example.springstudycode.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -25,5 +24,5 @@ public class Board {
         this.title = title;
         this.content = content;
     }
-    
+
 }
