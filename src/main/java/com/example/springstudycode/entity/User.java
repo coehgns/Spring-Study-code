@@ -5,6 +5,9 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -22,5 +25,8 @@ public class User {
 
     @Column(name = "password", nullable = false, length = 20)
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private List<Board> boardList = new ArrayList<>();
 
 }
