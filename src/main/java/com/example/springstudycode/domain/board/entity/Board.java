@@ -3,6 +3,7 @@ package com.example.springstudycode.domain.board.entity;
 import com.example.springstudycode.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +27,12 @@ public class Board {
     private User user;
 
     public void updateBoard(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    @Builder
+    public Board(String title, String content) {
         this.title = title;
         this.content = content;
     }
