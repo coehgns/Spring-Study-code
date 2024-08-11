@@ -1,5 +1,6 @@
-package com.example.springstudycode.entity;
+package com.example.springstudycode.domain.board.entity;
 
+import com.example.springstudycode.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
