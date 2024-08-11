@@ -20,6 +20,10 @@ public class Board {
     @Column(name = "content", nullable = false, length = 200)
     private String content;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public void updateBoard(String title, String content) {
         this.title = title;
         this.content = content;
