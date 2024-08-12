@@ -18,9 +18,7 @@ public class BoardService {
 
     public List<BoardResponse> findAllBoard() {
         return boardRepository.findAll()
-                .stream()
-                .map(BoardResponse::boardResponse)
-                .toList();
+                .stream().map(BoardResponse::boardResponse).toList();
     }
 
     public void addBoard(BoardCreateRequest request) {
