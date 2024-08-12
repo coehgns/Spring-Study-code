@@ -16,6 +16,13 @@ import java.util.List;
 public class BoardService {
     private BoardRepository boardRepository;
 
+    public List<BoardResponse> findAllBoard() {
+        return boardRepository.findAll()
+                .stream()
+                .map(BoardResponse::boardResponse)
+                .toList();
+    }
+
     public void addBoard(BoardCreateRequest request) {
 
         boardRepository.save(
