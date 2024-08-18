@@ -18,6 +18,7 @@ public class GlobalExceptionHandler {
         ErrorCode errorCode = e.getErrorCode();
         ErrorResponse response = ErrorResponse.of(errorCode.getMessage(), errorCode.getStatusCode());
 
+        // ResponseEntity는 HttpRequest에 대한 응답 데이터를 포함한 클래스임.
         return new ResponseEntity<>(response, HttpStatusCode.valueOf(errorCode.getStatusCode()));
     }
 }
