@@ -10,10 +10,10 @@ import lombok.Getter;
 public enum ErrorCode {
 
     // 400
-    BAD_REQUEST(400, "잘못된 요청입니다."),
+    BAD_REQUEST(400, "bad request."),
 
     // 404
-    USER_NOT_FOUND(404, "해당 유저를 찾을 수 없습니다."),
+    USER_NOT_FOUND(404, "not found."),
 
     // 500
     INTERNAL_SERVER_ERROR(500, "Internal server error");
